@@ -1,5 +1,5 @@
 FROM hseeberger/scala-sbt:8u171_2.12.6_1.1.6 as builder
-ARG VERSION=1.3.3.18
+ARG VERSION=1.3.3.17
 
 LABEL maintainer="cgiraldo@gradiant.org"
 LABEL organization="gradiant.org"
@@ -13,7 +13,7 @@ RUN cd /kafka-manager && git checkout tags/${KM_VERSION} && sbt clean dist
 
 
 FROM  openjdk:8u171-jre-alpine
-ARG VERSION=1.3.3.18
+ARG VERSION=1.3.3.17
 
 LABEL maintainer="cgiraldo@gradiant.org"
 LABEL organization="gradiant.org"
