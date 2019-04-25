@@ -1,5 +1,5 @@
 FROM hseeberger/scala-sbt:8u171_2.12.6_1.1.6 as builder
-ARG VERSION=1.3.3.23
+ARG VERSION=2.0.0.2
 
 LABEL maintainer="cgiraldo@gradiant.org"
 LABEL organization="gradiant.org"
@@ -19,7 +19,7 @@ RUN rm -fr /builded-kafka-manager/share
 COPY entrypoint.sh /builded-kafka-manager/
 
 FROM  openjdk:8u171-jre-alpine
-ARG VERSION=1.3.3.23
+ARG VERSION=2.0.0.2
 
 LABEL maintainer="cgiraldo@gradiant.org"
 LABEL organization="gradiant.org"
