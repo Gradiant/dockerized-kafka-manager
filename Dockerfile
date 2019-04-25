@@ -19,7 +19,7 @@ RUN rm -fr /builded-kafka-manager/share
 COPY entrypoint.sh /builded-kafka-manager/
 
 FROM  openjdk:8u171-jre-alpine
-ARG VERSION=1.3.3.18
+ARG VERSION=1.3.3.23
 
 LABEL maintainer="cgiraldo@gradiant.org"
 LABEL organization="gradiant.org"
@@ -28,7 +28,7 @@ ENV KM_VERSION=${VERSION}
 ENV ZK_HOSTS=localhost:2181
 
 COPY --from=builder /builded-kafka-manager /opt/kafka-manager
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash curl
 WORKDIR /opt/kafka-manager
 
 EXPOSE 9000
