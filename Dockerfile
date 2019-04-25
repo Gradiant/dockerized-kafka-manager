@@ -16,7 +16,6 @@ RUN cd /kafka-manager-${KM_VERSION} && \
 RUN unzip -d /tmp /kafka-manager-${KM_VERSION}/target/universal/kafka-manager-${KM_VERSION}.zip
 RUN mv /tmp/kafka-manager-${KM_VERSION} /builded-kafka-manager
 RUN rm -fr /builded-kafka-manager/share
-RUN echo "akka.logger-startup-timeout = 30s" >> /builded-kafka-manager/conf/application.conf
 COPY entrypoint.sh /builded-kafka-manager/
 
 FROM  openjdk:8u171-jre-alpine
