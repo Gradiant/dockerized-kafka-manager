@@ -18,7 +18,7 @@ RUN mv /tmp/kafka-manager-${KM_VERSION} /builded-kafka-manager
 RUN rm -fr /builded-kafka-manager/share
 COPY entrypoint.sh /builded-kafka-manager/
 
-FROM  openjdk:8u171-jre-alpine
+FROM  openjdk:8-jre-alpine
 ARG VERSION=2.0.0.2
 
 LABEL maintainer="cgiraldo@gradiant.org"
